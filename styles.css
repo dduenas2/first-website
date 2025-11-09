@@ -7,10 +7,10 @@
 
 /* Variables de color */
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
+    --primary-color: #f97316;      /* Naranja */
+    --secondary-color: #ea580c;    /* Naranja oscuro */
     --text-color: #1f2937;
-    --bg-color: #f9fafb;
+    --bg-color: #fff7ed;           /* Naranja muy claro */
     --card-bg: #ffffff;
 }
 
