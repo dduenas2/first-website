@@ -16,7 +16,7 @@
 
 /* Estilos generales */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
@@ -83,7 +83,7 @@ h2 {
 #hero {
     text-align: center;
     padding: 4rem 2rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #406F82 0%, #57C785 100%);
     border-radius: 10px;
     color: white;
     margin-top: 2rem;
@@ -131,8 +131,12 @@ h2 {
 }
 
 .cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    
+}
+.cta-button:active {
+    transform: translateY(-1px);
 }
 
 /* Skills Grid */
