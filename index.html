@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Primera Página Web</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -82,11 +79,97 @@
 
         <section id="contacto">
     <h2>Contacto</h2>
-    <div class="contact-info">
-        <p><i class="fas fa-envelope"></i> Dalduenas@poligran.edu.co</p>
-        <p><i class="fab fa-github"></i> GitHub: @dduenas2</p>
-        <p><i class="fab fa-linkedin"></i> LinkedIn: David DC</p>
-        <p><i class="fas fa-map-marker-alt"></i> Copacabana Antioquia</p>
+    <p class="section-description">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+    
+    <div class="contact-container">
+        <div class="contact-info">
+            <h3>Información de Contacto</h3>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <h4>Email</h4>
+                    <p>dalduenas@poligran.edu.co</p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-github"></i>
+                <div>
+                    <h4>GitHub</h4>
+                    <p><a href="https://github.com/dduenas2" target="_blank">@dduenas2</a></p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <h4>Ubicación</h4>
+                    <p>Bogotá, Colombia</p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                    <h4>Disponibilidad</h4>
+                    <p>Lun - Vie: 9:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+        </div>
+
+        <form id="contact-form" class="contact-form">
+            <div class="form-group">
+                <label for="name">Nombre Completo *</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    placeholder="Juan Pérez"
+                    required
+                >
+                <span class="error-message" id="name-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="juan@ejemplo.com"
+                    required
+                >
+                <span class="error-message" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Asunto *</label>
+                <select id="subject" name="subject" required>
+                    <option value="">Selecciona un asunto</option>
+                    <option value="proyecto">Propuesta de Proyecto</option>
+                    <option value="colaboracion">Colaboración</option>
+                    <option value="consulta">Consulta Técnica</option>
+                    <option value="otro">Otro</option>
+                </select>
+                <span class="error-message" id="subject-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Mensaje *</label>
+                <textarea 
+                    id="message" 
+                    name="message" 
+                    rows="5" 
+                    placeholder="Escribe tu mensaje aquí..."
+                    required
+                ></textarea>
+                <span class="error-message" id="message-error"></span>
+            </div>
+
+            <button type="submit" class="submit-button">
+                <i class="fas fa-paper-plane"></i>
+                Enviar Mensaje
+            </button>
+
+            <div id="form-status" class="form-status"></div>
+        </form>
     </div>
 </section>
     </main>
