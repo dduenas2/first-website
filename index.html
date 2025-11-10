@@ -1,29 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Meta tags esenciales -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Primera Página Web</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="David Dueñas - Desarrollador Web en formación especializado en JavaScript, React y Node.js. Portafolio de proyectos y contacto.">
+    <meta name="keywords" content="desarrollador web, JavaScript, React, Node.js, programador, portfolio, David Dueñas">
+    <meta name="author" content="David Dueñas">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="David Dueñas - Desarrollador Web">
+    <meta property="og:description" content="Portafolio de desarrollador web en formación">
+    <meta property="og:image" content="images/profile.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="David Dueñas - Desarrollador Web">
+    <meta name="twitter:description" content="Portafolio de desarrollador web en formación">
+    
+    <!-- Título de la página -->
+    <title>David Dueñas | Desarrollador Web</title>
+    
+    <!-- Favicon (opcional, agregarlo después) -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts (opcional, para mejorar tipografía) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos principales -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <nav>
-            <h1>David Dueñas</h1>
-            <ul>
-                <li><a href="#sobre-mi">Coordinador de almacen</a></li>
-                <li><a href="#habilidades">Habilidades {}</a></li>
-                <li><a href="#proyectos">Proyectos (pronto)</a></li>
-                <li><a href="#contacto">Cel: 3146229544</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <h1 class="logo">David Dueñas</h1>
+        
+        <!-- Botón hamburguesa (solo visible en móvil) -->
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Abrir menú">
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+        </button>
+        
+        <!-- Menú de navegación -->
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+            <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+            <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+            <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+    </nav>
+</header> 
 
     <main>
            <section id="hero">
     <div class="hero-content">
-        <img src="images/profile.jpg" alt="David Dueñas" class="profile-image">
+        <img src="images/profile.jpg" alt="David Dueñas" class="profile-image" loading="lazy">
         <h2>¡Hola! Soy David Dueñas</h2>
         <p>Desarrollador Web en Formación</p>
         <p class="hero-subtitle">Especializado en JavaScript, React y Node.js</p>

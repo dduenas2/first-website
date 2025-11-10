@@ -1,4 +1,59 @@
 // ============================================
+// MENÚ MÓVIL HAMBURGUESA
+// ============================================
+
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+const navLinks = document.querySelectorAll('.nav-link');
+
+// Toggle del menú
+if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener('click', () => {
+        mobileMenuToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        
+        // Prevenir scroll del body cuando el menú está abierto
+        if (navMenu.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    });
+}
+
+// Cerrar menú al hacer clic en un enlace
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            mobileMenuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+});
+
+// Cerrar menú al hacer clic fuera de él
+document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768) {
+        if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+            if (navMenu.classList.contains('active')) {
+                mobileMenuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+    }
+});
+
+// Cerrar menú al redimensionar ventana (si cambias de móvil a desktop)
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        mobileMenuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+});
+// ============================================
 // NAVEGACIÓN Y SCROLL SUAVE
 // ============================================
 
