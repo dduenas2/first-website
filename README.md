@@ -54,7 +54,6 @@ Este proyecto es de código abierto y está disponible para fines educativos.
 
 - **Email:** dalduenas@poligran.edu.co
 - **GitHub:** [@dduenas2](https://github.com/dduenas2)
-- **LinkedIn:** [Tu LinkedIn]
 
 ---
 
